@@ -33,7 +33,7 @@ fun App() {
 @Composable
 fun CenteredTextFieldWithButton() {
     var text by remember { mutableStateOf("") }
-    val prefillText = "กด่ฟหก"
+    val prefillText = "สวัสดีวันนี้มันจันทร์ ทดสอบภาษาไทย ๅฟ่าา็๊๋ษษ"
 
     Box(
         modifier = Modifier.fillMaxSize(),

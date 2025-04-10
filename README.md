@@ -1,30 +1,27 @@
-# Text Input Field Issue
+# Text Input Field Issue - RESOLVED
 
-This repository demonstrates an issue with text input fields in KMP iOS. Below is a video demonstration of the problem:
+This repository was created to demonstrate an issue with text input fields in Compose Multiplatform for iOS, specifically with Thai characters. The issue has now been resolved with the latest version updates.
 
-https://user-images.githubusercontent.com/pererikbergman/TextFieldIssue/main/mtrl/textinputfield.mp4
+## Issue Description
 
-## Attempted Solution
+The original issue affected text input fields in Compose Multiplatform on iOS when using Thai characters. The TextField component had problems properly handling Thai text: "สวัสดีวันนี้มันจันทร์ ทดสอบภาษาไทย ๅฟ่าา็๊๋ษษ".
 
-We attempted to fix the text input field issue by updating to newer versions of the Kotlin Multiplatform and Compose dependencies. The following changes were made:
+## Solution
+
+The issue has been resolved by updating to newer versions of the Kotlin Multiplatform and Compose dependencies. The following changes were made:
 
 1. Updated Kotlin to version `2.1.20-RC2` (from `2.1.0`)
-2. Updated Compose Multiplatform to version `1.8.0-alpha03` (from `1.7.0`)
+2. Updated Compose Multiplatform to version `1.8.0-beta02` (from `1.7.3`)
 3. Updated Android SDK targets:
-   - compileSdk: 35 (from 34)
-   - targetSdk: 35 (from 34)
-4. Added the JetBrains Compose Maven repository to access the newer versions:
-   ```kotlin
-   repositories {
-       maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
-       // other repositories...
-   }
-   ```
-
-**Note:** Despite these updates, the text input field issue in the iOS implementation persists. We're continuing to investigate a proper solution.
+   - compileSdk: 35
+   - targetSdk: 35
 
 ## Current Status
 
-The issue with text input fields in the iOS implementation remains unresolved. The problem appears to be related to how Compose Multiplatform handles text input on iOS platforms, particularly with focus management and keyboard interactions.
+✅ **RESOLVED**: The text input field issue in the iOS implementation has been fixed with the version updates mentioned above. The TextField now correctly handles Thai characters.
+
+## Test Case
+
+The repository contains a simple test case with an `OutlinedTextField` that can be prefilled with Thai text. The test demonstrates that the issue has been resolved.
 
 Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
